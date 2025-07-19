@@ -54,18 +54,22 @@ def logger(u_name):
                 print("what exercise have you did today")
                 user_input = input()
                 f.write("[ "+time+" ] " + user_input + "\n")
+                f.close()
 
         elif u_name == 2:
             with open("rohan_ex.txt", "a") as f:
                 print("what exercise have you did today")
                 user_input = input()
                 f.write("[ "+time+" ] "+ user_input + "\n")
+                f.close()
 
         elif u_name == 3:
             with open("hammad_ex.txt", "a") as f:
                 print("what exercise have you did today")
                 user_input = input()
                 f.write("[ "+time+" ] "+user_input + "\n")
+                f.close()
+
 
             ###############
     elif f_choice == 2:
@@ -74,18 +78,21 @@ def logger(u_name):
                 print("what food you ate today")
                 user_input = input()
                 f.write("[ "+time+" ] "+ user_input + "\n")
+                f.close()
 
         elif u_name == 2:
             with open("rohan_diet.txt", "a") as f:
                 print("what food you ate today")
                 user_input = input()
                 f.write("[ "+time+" ] "+ user_input + "\n")
+                f.close()
 
         elif u_name == 3:
             with open("hammad_diet.txt", "a") as f:
                 print("what food you ate today")
                 user_input = input()
                 f.write("[ "+time+" ] "+ user_input + "\n")
+                f.close()
 
 def retrieval(u_name, ftc):
     """This function helps to reads user data from individual user and from either diet of exercise and print result in main console"""
@@ -93,27 +100,34 @@ def retrieval(u_name, ftc):
         if u_name == 1:
             with open("harry_ex.txt", "r") as f:
                     print(f.read())
+            f.close()
 
 
         elif u_name == 2:
             with open("rohan_ex.txt", "r") as f:
                     print(f.read())
+            f.close()
 
         elif u_name == 3:
             with open("hammad_ex.txt", "r") as f:
                     print(f.read())
+            f.close()
+
     elif ftc == 2:
         if u_name == 1:
             with open("harry_diet.txt", "r") as f:
                     print(f.read())
+            f.close()
 
         elif u_name == 2:
             with open("rohan_diet.txt", "r") as f:
                     print(f.read())
+            f.close()
 
         elif u_name == 3:
             with open("hammad_ex.diet", "r") as f:
                     print(f.read())
+            f.close()
 
 
 def final_func():
