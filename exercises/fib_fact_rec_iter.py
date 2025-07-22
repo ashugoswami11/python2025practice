@@ -14,13 +14,15 @@
 
 #### recursively
 
-# def fact_recursive(n):
-#     if n == 0 or n == 1:
-#         return n
-#     else:
-#         return n * fact_recursive(n-1)
+def fact_recursive(n):
+    if n == 0 or n == 1:
+        return n
+    else:
+        return n * fact_recursive(n-1)
 
 
+num = int(input("Enter a number: "))
+fact_recursive(num)
 # agenda 2nd:-- fibonacci printing
 ### iteratively
 
@@ -58,21 +60,21 @@
 
 
 ###fib recursive
-def fibo_recursive(n):
-    if n == 0 or n == 1:
-        return n
-    else:
-        return fibo_recursive(n-1) + fibo_recursive(n-2)
-
-
-print("to print series of fibonacci numbers enter 1\n",
-        "to print the nth fibonacci number enter 2",)
-choice = int(input())
-print("enter a number for fib ")
-u_num = int(input())
-if choice == 2:
-    print(fibo_recursive(u_num-1))
-else:
-    for i in range(0,u_num):
-        print(fibo_recursive(i))
+# def fibo_recursive(n):
+#     if n == 0 or n == 1:
+#         return n
+#     else:
+#         return fibo_recursive(n-1) + fibo_recursive(n-2)
+#
+#
+# print("to print series of fibonacci numbers enter 1\n",
+#         "to print the nth fibonacci number enter 2",)
+# choice = int(input())
+# print("enter a number for fib ")
+# u_num = int(input())
+# if choice == 2:
+#     print(fibo_recursive(u_num-1))
+# else:
+#     for i in range(0,u_num):
+#         print(fibo_recursive(i))
 
