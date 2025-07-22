@@ -1,5 +1,4 @@
 import random as rand
-
 from django.utils.translation import trim_whitespace
 
 list = ["snake","water","gun"]
@@ -59,3 +58,4 @@ else:
     print("your score is", score_user,
         "computer score is", score_computer)
     print("****computer won this game*****")
+
