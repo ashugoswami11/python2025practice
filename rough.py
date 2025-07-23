@@ -1,6 +1,5 @@
-script = "my name is ashu and i am a data engineer"
+from functools import reduce
 
-splitted = script.split()
-print(len(script))
-print(len(splitted))
 
+fact = lambda n: reduce(lambda x,y:x*y,range(1,n+1))if n>0 else 1
+print(fact(int(input())))

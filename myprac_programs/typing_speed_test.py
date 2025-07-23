@@ -1,5 +1,4 @@
 #agenda :-- to create a program which give a sentence to the user and check how and accurately the user type that sentence
-
 import time
 
 script = "python is a fun programming language to learn"
