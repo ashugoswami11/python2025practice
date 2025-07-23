@@ -1,4 +1,6 @@
-dict = {"ashu":"programmer", "data":"data engineer", "laptop":"lenovo"}
+script = "my name is ashu and i am a data engineer"
 
-if "ashu" in dict:
-    print("ashu is a ", dict["ashu"])
+splitted = script.split()
+print(len(script))
+print(len(splitted))
+
