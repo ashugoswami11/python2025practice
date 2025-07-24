@@ -1,5 +1,5 @@
 import random as rand
-from django.utils.translation import trim_whitespace
+
 
 list = ["snake","water","gun"]
 
@@ -10,7 +10,7 @@ score_user = 0
 while counter > 0:
     comp_choice = rand.choice(list)
     print("chances left are:-- ",counter," out of 10")
-    user_input = trim_whitespace(input(f"enter your choices:-- {"snake"},{"water"},{"gun"}\n"))
+    user_input = (input(f"enter your choices:-- {"snake"},{"water"},{"gun"}\n").strip())
 
     if user_input == comp_choice:
         print("it's a tie!")
