@@ -1,4 +1,4 @@
-#(cgpt)practice program for enum :-- student attendance marking system
+#practice program for enum :-- student attendance marking system
 """agenda :-- to create an attendance system using enumerators,
               A program which contains a list of student iterate
               those student names along with their role number
