@@ -1,7 +1,10 @@
 from pygame import *
 
+#-- working on the water alert
+
 mixer.init()
-mixer.music.load("water.mp3")
+#use either double back slashes or front slashes to give paths
+mixer.music.load("C:/Users/ashug/OneDrive/Documents/python2025/exercises/healthy programmer/water.mp3")
 
 mixer.music.set_volume(0.3)
 
