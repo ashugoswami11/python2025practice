@@ -1,0 +1,19 @@
+"""
+list1 = [2,3,45,6,34,67,3,89,6,57,4,34,88,45,2,38,7,23,67,44,38,87,65,23]
+#---------------filter---------
+# filter simply filter those values of list which pass against  a condition and return an iterable
+ods = list(filter(lambda x : x%2!=0,list1))  #(func,iterable)
+print("odd numbers out of list: ",ods)
+
+#--------------map-------------
+# map apply some function on each value of the iterable and returns an iterable too
+ods_square = list(map(lambda x : x*x,ods))
+print("square of odd numbers by map: ",ods_square)
+
+#-------------reduce-------------
+# reduce apply some functions on the all items of the list and return a value as a result
+
+from functools import reduce  #this import is important to use the reduce function
+product_of_odds = reduce(lambda x,y: x*y ,ods_square)
+print("product of all ods_square: ",product_of_odds)
+"""
