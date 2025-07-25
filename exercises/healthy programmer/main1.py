@@ -1,31 +1,11 @@
-from pygame import *
+#-- working on the water alert
+import time
 
-mixer.init()
-mixer.music.load("water.mp3")
+current_local_time = time.strftime("%H:%M",time.localtime())
+print(current_local_time)
 
-mixer.music.set_volume(0.3)
 
-while True:
-    print("welcome to music player")
-    print("press 1 to play the music player")
-    print("press 2 to pause the music player")
-    print("press 3 to resume the music player")
-    print("press 4 to stop and quit the music player")
-
-    user_input = int(input())
-    if user_input == 1:
-        mixer.music.play()
-        print("\nmusic is playing")
-
-    elif user_input == 2:
-        mixer.music.pause()
-        print("\nmusic is paused")
-    elif user_input == 3:
-        mixer.music.unpause()
-        print("\nmusic is resumed")
-
-    else:
-        mixer.music.fadeout(1000)
-        # mixer.music.stop()
-        print("\nmusic is stopped bye bye")
-        break
+# while True:
+#     current_local_time = time.strftime("%H:%M", time.localtime())
+#     if "5:00" < current_local_time < "12:00":
+#         print("good morning")

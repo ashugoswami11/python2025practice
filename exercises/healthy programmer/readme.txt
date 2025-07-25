@@ -22,10 +22,10 @@ tasks:--
 
 
 challenges :--
-1. maybe any two or three alerts can be executed at the same time causing a clash
+1. maybe any two or three alerts can be executed at the same time causing a clash   __(sleep) can help here
 2. handle that clash like first user stop the first music and later second or third
 
 rules :-
 1. for the alert music play take help from the pygame module
-2. don't change the names of the files 
+2. don't change the names of the files
 """
