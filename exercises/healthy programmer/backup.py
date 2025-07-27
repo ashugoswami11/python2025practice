@@ -1,14 +1,21 @@
+#-- working on the water alert
 
 from datetime import timedelta, datetime, time
 from time import sleep
-from pygame import mixer
-from log_retrive import logger
 
+from pygame import mixer
 mixer.init()
 mixer.music.set_volume(0.3)
 
+from log_retrive import logger
+
+# now = datetime.now()
+# formatted_now = now.strftime("%H:%M") #current time
+
 from time_list_generator import water_alert
+
 from time_list_generator import eyes_alert
+
 from time_list_generator import exercise_alert
 
 
@@ -28,7 +35,7 @@ while True:
     if formatted_now in exercise_alert() and "exercise" not in task_queue:
         task_queue.append("exercise")
 
-    if task_queue: #checks if there's something inside the list.. this line returns true and execute further code if there is any value inside the list
+    if task_queue:
         task = task_queue.pop(0)
         if task == "water":
             mixer.music.load("water.mp3")
