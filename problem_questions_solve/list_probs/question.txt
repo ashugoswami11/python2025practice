@@ -1,0 +1,120 @@
+Q1. Custom Merge and Sort
+You are given two strings of numbers separated by commas:
+
+python
+Copy
+Edit
+s1 = "9,1,6,3"
+s2 = "8,2,5"
+🔸 Tasks:
+
+Convert both strings to integer lists using split().
+
+Merge them using extend() (not + operator).
+
+Sort the merged list in ascending order.
+
+Insert the number 10 at the 2nd position (index 1).
+
+Print the final list.
+
+Q2. Sentence Word Game
+Given a sentence input by the user:
+
+"python is awesome and powerful"
+🔸 Tasks:
+
+Split the sentence into words.
+
+Create a new list where:
+
+If the word length is even, insert it at the beginning of a list using insert(0, word).
+
+If the word length is odd, append it at the end of the list.
+
+Print the final list.
+
+Q3. Advanced Extend & Filtering
+You are given a list of strings like:
+
+python
+Copy
+Edit
+words = ["apple", "banana orange", "grape", "kiwi mango"]
+🔸 Tasks:
+
+Loop through the list.
+
+If a string contains space(s), split it into words and extend the main list with those words.
+
+Remove the original item (the one with space).
+
+Print the new, flattened list of single words only.
+
+Expected output:
+
+python
+Copy
+Edit
+["apple", "banana", "orange", "grape", "kiwi", "mango"]
+Q4. Custom List Builder
+User gives an input string of numbers separated by space:
+
+python
+Copy
+Edit
+"5 3 7 1 9"
+🔸 Tasks:
+
+Convert to list of integers.
+
+Create a new list:
+
+If number is odd → insert at index 0
+
+If even → append to the end
+
+After processing, sort the list in descending order and print it.
+
+Q5. Insert in Custom Position
+You are given a sentence like:
+
+python
+Copy
+Edit
+"Ashu is learning Python"
+🔸 Tasks:
+
+Convert to list of words.
+
+Insert the word "definitely" after every word of length 2 or less (like "is").
+
+Print the modified sentence (as a string using join()).
+
+Expected Output:
+
+arduino
+Copy
+Edit
+"Ashu is definitely learning Python"
+🧠 Bonus Challenge: Nested Insert & Extend
+You have:
+
+python
+Copy
+Edit
+lists = [[1, 2], [3, 4], [5]]
+🔸 Tasks:
+
+Extend the first list with the second and third list (flatten it).
+
+Insert the number 99 at position 3.
+
+Print the updated list.
+
+Expected Output:
+
+csharp
+Copy
+Edit
+[1, 2, 3, 99, 4, 5]
