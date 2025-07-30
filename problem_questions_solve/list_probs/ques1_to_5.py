@@ -16,31 +16,35 @@ print(ls)
 # #question 2:----
 """
 sentence = "python is awesome and powerful"
-sentence = sentence.split(" ")
+words = sentence.split(" ")
 
-ls = [i for i in sentence if len(i)%2 == 0]
-ls2 = [i for i in sentence if len(i)%2 != 0]
+result = []
+for word in words:
+    if len(word)%2 == 0:
+        result.insert(0,word)
+    else:
+        result.append(word)
 
-ls.extend(ls2)
-print(ls)
+print(result)
 """
 
 # question 3:----
+
 """
+
+Never remove elements from a list while iterating on it.
+Use a new list (result) and build the final data.
+
 words = ["apple", "banana orange", "grape", "kiwi mango"]
 
 ls = []
 for i in words:
-    if i.count(" ") > 0:
+    if " " in i:
+        ls.extend(i.split(" "))
+    else:
         ls.append(i)
-        words.remove(i)
 
-new_ls = " ".join(ls)
-new_ls = new_ls.split(" ")
-
-words.extend(new_ls)
-print(words)
-
+print(ls)
 """
 
 #question 4:--
@@ -68,13 +72,9 @@ sent_as_ls = sent.split(" ")
 
 new_sent_as_ls = []
 for i in sent_as_ls:
+    new_sent_as_ls.append(i)
     if len(i)<=2:
-        ind = sent_as_ls.index(i)
-        new_sent_as_ls.append(i)
-        new_sent_as_ls.insert(ind+1,"definitely") #index+1 make sure insertion of definitely must be after the word which lenth is <=2
-    else:
-        new_sent_as_ls.append(i)
-
+        new_sent_as_ls.append("definitely")
 
 print(new_sent_as_ls)
 

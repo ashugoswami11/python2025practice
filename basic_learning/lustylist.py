@@ -177,3 +177,81 @@ new_int_list.sort()
 new_int_list.insert(1,10)
 print(new_int_list)
 """
+
+#### changing items of list ----------------
+"""
+ls = ["harry","ashu",1,2,"lenovo"]
+
+ls[2] = "nelson"
+ls[3] = "madela"
+
+print(ls)
+"""
+#chaning multiple items of list at once
+"""
+ls = ["harry","ashu",1,2,"lenovo"]
+
+ls[2:4] = ["michel", "trump", "obama"] #this means replace items
+print(ls)
+ls[2:4] = [["michel", "trump", "obama"]] #this means replace items with the list of items
+print(ls)
+
+"""
+
+
+### removing items from the list ----------
+"""
+ls = ["harry","ashu","lenovo","ashu"] #always the first one will be removed
+ls.remove("ashu")
+print(ls)
+ls.remove("ashu")
+print(ls)
+"""
+
+#To remove an item by it's index value in the list we use pop()
+"""
+ls = ["harry","ashu","lenovo","ashu"]
+
+#if we do not provide any index in the pop it will delete the last item of the list
+# ls.pop()
+# print(ls)
+
+item = ls.pop(0) #it also return the deleted item it is popping from the list
+print(item)
+item1 = ls.pop(0)
+print(item1)
+item2 = ls.pop(0)
+print(item2)
+print(ls)
+"""
+
+#removing an item or whole list using the del keyword
+"""
+ls = ["harry","ashu","lenovo","ashu"]
+
+del ls[0] #to delete a single item
+print(ls)
+
+del ls #to delete whole list
+print(ls)
+"""
+
+#clearing the whole list using clear()
+"""
+ls = ["harry","ashu","lenovo","ashu"]
+ls.clear()
+print(ls) #it will remove the items of the entire list and clean it totally
+
+#unlike the del function which removes the name and address of the list from the memory leaving no trace of the list clear just clean the list retaining it's memory address
+
+extra:- 
+animals = ['lion', 'tiger', 'monkey', 'elephant', 'frog']
+
+filtered_animals = [animal.title() for animal in animals]  #.title() return the all words first character in upper
+print(filtered_animals)
+
+"""
+
+list = ["ashu", "lenovo","lg"]
+
+print("home is" + list.pop())
