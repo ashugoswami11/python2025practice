@@ -251,7 +251,3 @@ filtered_animals = [animal.title() for animal in animals]  #.title() return the 
 print(filtered_animals)
 
 """
-
-list = ["ashu", "lenovo","lg"]
-
-print("home is" + list.pop())

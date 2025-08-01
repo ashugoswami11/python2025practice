@@ -1,0 +1,294 @@
+1. Merge and Analyze Frequency
+Problem:
+You are given two dictionaries representing product sales:
+
+python
+Copy
+Edit
+sales1 = {'apple': 50, 'banana': 20, 'orange': 30}
+sales2 = {'banana': 10, 'kiwi': 15, 'apple': 25}
+👉 Tasks:
+
+Merge both dictionaries into one.
+
+If a key appears in both, add their values.
+
+Sort the dictionary by values in descending order.
+
+✅ 2. Word Frequency Counter
+Problem:
+Given a long paragraph, count the frequency of each word (ignore case and punctuation).
+
+python
+Copy
+Edit
+text = "Python is great. Python is dynamic. Python is easy to learn."
+👉 Tasks:
+
+Convert to lowercase.
+
+Remove punctuation like ., ,.
+
+Count each word’s occurrence using dictionary.
+
+✅ 3. Reverse Dictionary Lookup
+Problem:
+You're given a dictionary like:
+
+python
+Copy
+Edit
+students = {'101': 'Ashu', '102': 'Ravi', '103': 'Ashu'}
+👉 Tasks:
+
+Reverse the dictionary so names are keys and student IDs are values.
+
+If one name has multiple IDs, store them in a list.
+
+📝 Expected Output:
+
+python
+Copy
+Edit
+{'Ashu': ['101', '103'], 'Ravi': ['102']}
+✅ 4. Nested Dictionary Filtering
+Problem:
+You are given a dictionary of employees:
+
+python
+Copy
+Edit
+employees = {
+    'e1': {'name': 'Ashu', 'salary': 45000},
+    'e2': {'name': 'Ravi', 'salary': 52000},
+    'e3': {'name': 'Mona', 'salary': 49000},
+}
+👉 Tasks:
+
+Find the employee with the highest salary.
+
+Return their employee ID and name.
+
+✅ 5. Student Marks Analyzer
+Problem:
+Given a dictionary of students and their subject marks:
+
+python
+Copy
+Edit
+marks = {
+    'Ashu': {'math': 80, 'science': 70},
+    'Ravi': {'math': 90, 'science': 88},
+    'Mona': {'math': 60, 'science': 75}
+}
+👉 Tasks:
+
+Calculate the average marks for each student.
+
+Print the name of the student with the highest average.
+
+✅ 6. Invert a Dictionary with Unique Values
+Problem:
+Given this dictionary:
+
+python
+Copy
+Edit
+d = {'a': 1, 'b': 2, 'c': 3}
+👉 Task:
+Invert it to get:
+
+python
+Copy
+Edit
+{1: 'a', 2: 'b', 3: 'c'}
+⚠️ Constraint: Raise an error if the values are not unique.
+
+✅ 7. Build a Custom Dictionary from Two Lists
+Problem:
+
+python
+Copy
+Edit
+keys = ['name', 'age', 'gender']
+values = ['Ashu', 21, 'Male']
+👉 Tasks:
+
+Build a dictionary from these two lists.
+
+Then, add a new key "city": "Delhi" without using .update().
+
+✅ 8. Remove Duplicate Values
+Problem:
+You're given a dictionary like:
+
+python
+Copy
+Edit
+d = {'a': 1, 'b': 2, 'c': 1, 'd': 3}
+👉 Tasks:
+
+Remove entries where the value is duplicated (keep only unique values).
+📝 Expected Output:
+
+python
+Copy
+Edit
+{'b': 2, 'd': 3}
+✅ 9. Grouping by First Letter
+Problem:
+You have this list:
+
+python
+Copy
+Edit
+names = ["Ashu", "Ankit", "Ravi", "Ramesh", "Mona"]
+👉 Tasks:
+
+Group names in a dictionary by their first letter.
+
+📝 Expected Output:
+
+python
+Copy
+Edit
+{'A': ['Ashu', 'Ankit'], 'R': ['Ravi', 'Ramesh'], 'M': ['Mona']}
+✅ 10. Complex Nesting Access
+Problem:
+Given a deeply nested dictionary:
+
+python
+Copy
+Edit
+data = {
+    "user": {
+        "info": {
+            "name": "Ashu",
+            "location": {
+                "city": "Delhi",
+                "pin": 110094
+            }
+        }
+    }
+}
+👉 Task:
+Write a function that extracts and returns "city" and "pin" safely, even if any key in the chain is missing (no KeyError).
+
+####pandas tools-------------------------------------------------------------------------------
+
+ Pandas tools / methods useful for those dictionary problems
+
+1. pd.DataFrame
+Dictionary se DataFrame banane ke liye.
+Example: df = pd.DataFrame.from_dict(marks, orient='index')
+   Student names as index, subjects as columns.
+
+
+
+2. pd.Series
+Simple key-value data ko series mein convert karne ke liye (like frequency counts, inverted lookup).
+
+Example: s = pd.Series({'apple': 50, 'banana': 20})
+
+3. .to_dict()
+DataFrame/Series ko wapas dictionary mein convert karne ke liye.
+
+Example: df.to_dict(orient='list') ya s.to_dict()
+
+4. .from_dict()
+Dictionary se DataFrame/Series banane ka alternate.
+
+Example: pd.DataFrame.from_dict(d, orient='index')
+
+5. .add() / .combine_first() / + on Series
+Do dictionaries (as Series) ko merge karke values ko add karne ke liye.
+
+Example:
+
+python
+Copy
+Edit
+s1 = pd.Series(sales1)
+s2 = pd.Series(sales2)
+merged = s1.add(s2, fill_value=0)  # common keys summed
+6. .sort_values()
+Series/DataFrame ko value ke basis par sort karne ke liye.
+
+Example: merged.sort_values(ascending=False)
+
+7. .value_counts()
+Word frequency count ke liye (word-level Series par).
+
+Example:
+
+python
+Copy
+Edit
+words = pd.Series(text_lower.split())
+freq = words.value_counts()
+8. String methods: .str.lower(), .str.replace(), .str.split()
+Text ko normalize karne ke liye: lowercase, punctuation hatana, split karna.
+
+python
+Copy
+Edit
+cleaned = text.lower().str.replace(r'[^\w\s]', '', regex=True)
+words = cleaned.str.split()
+9. .explode()
+List-like cells ko individual rows mein todne ke liye (useful in reversed lookup / grouping).
+
+Example: agar ek name ke multiple IDs list mein hain: df.explode('ids')
+
+10. .groupby()
+Reverse lookup ya grouping by first letter etc.:
+
+Example:
+
+python
+Copy
+Edit
+df = pd.DataFrame({'name': names})
+grouped = df.groupby(df['name'].str[0])['name'].apply(list)
+11. .idxmax() or .nlargest()
+Highest salary / average find karne ke liye.
+
+Example: avg = df.mean(axis=1); top = avg.idxmax()
+
+12. .mean()
+Average nikalne ke liye per row/column.
+
+Example: df.mean(axis=1) for student averages.
+
+13. .reset_index() / .set_index()
+Index ko manipulate karna for easier conversion between dict and DataFrame.
+
+14. pd.json_normalize()
+Deeply nested dictionary ko flat table mein convert karne ke liye (question 10 style).
+
+🧠 Kaunse question ke liye kaunse tool ka use:
+Merge & add sales dicts: pd.Series, .add(), .sort_values(), .to_dict()
+
+Word frequency: string methods (.str.lower(), .str.replace()), .split(), pd.Series, .explode() (if splitting into lists), .value_counts()
+
+Reverse lookup: pd.Series, convert to DataFrame, .groupby() with .apply(list), then .to_dict()
+
+Nested filtering / highest salary: pd.DataFrame.from_dict(), .idxmax(), indexing
+
+Student average: DataFrame, .mean(), .idxmax()
+
+Invert dict with unique values: Series and to_dict() after checking uniqueness (can check duplicates with .duplicated())
+
+Custom build from lists: pd.Series(values, index=keys).to_dict() then add new key normally
+
+Remove duplicate values: convert to Series, use boolean masking with .duplicated(keep=False) to filter, then back to dict
+
+Grouping by first letter: DataFrame + .groupby()
+
+Safe deep access: use json_normalize() or nested get() chains; pandas helps if normalized
+
+🛠 Extras you might use for safety / cleaning
+.fillna() — missing data handling
+
+.drop_duplicates() — duplicates removal before conversion
+
+.apply() — custom per-row/element logic if needed
