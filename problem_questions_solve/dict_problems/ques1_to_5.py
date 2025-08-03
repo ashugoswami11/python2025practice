@@ -20,8 +20,10 @@ my_sorted = sorted(sales3.items(), key=lambda x: x[1], reverse = True)
 print(dict(my_sorted))
 
 """
+from itertools import count
 
 #Question 2:-------
+"""
 import string
 
 text = "Python is great. Python is dynamic. Python is easy to learn."
@@ -38,7 +40,32 @@ for i in new_text:
         my_dict.update({i:new_text.count(i)}) # list_name.count("word")
 
 print(my_dict)
+"""
+
+#question 3 :-------
+"""
+students = {'101': 'Ashu', '102': 'Ravi', '103': 'Ashu'}
+
+reverse_dict = {}
+
+for id,name in students.items(): #give tuple(id=101, name="ashu")
+    if name in reverse_dict:
+        reverse_dict[name].append(id)
+    else:
+        reverse_dict[name] = [id]
+
+print(reverse_dict)
+
+"""
+#question 4:---
+
+employees = {
+    'e1': {'name': 'Ashu', 'salary': 45000},
+    'e2': {'name': 'Ravi', 'salary': 52000},
+    'e3': {'name': 'Mona', 'salary': 49000},
+}
 
 
+highest = dict(sorted(employees.items(),key = lambda x: x[1]["salary"], reverse=True))
 
-
+print(highest)
