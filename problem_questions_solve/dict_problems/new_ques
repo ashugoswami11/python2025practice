@@ -1,0 +1,89 @@
+Q1 — Easy: Word Count in a String
+Problem:
+Ek string di gayi hai, count karo har word kitni baar aaya hai, aur result dictionary me store karo.
+
+Example Input:
+
+python
+Copy
+Edit
+text = "apple banana apple orange banana apple"
+Expected Output:
+
+python
+Copy
+Edit
+{'apple': 3, 'banana': 2, 'orange': 1}
+
+
+Q2 — Medium: Merge Two Dictionaries by Adding Values
+Problem:
+Do dictionaries di gayi hain jisme keys same bhi ho sakti hain. Keys ke values ko add karke ek new dictionary banao.
+
+Example Input:
+
+python
+Copy
+Edit
+dict1 = {'a': 10, 'b': 20, 'c': 30}
+dict2 = {'a': 5, 'b': 15, 'd': 25}
+Expected Output:
+
+python
+Copy
+Edit
+{'a': 15, 'b': 35, 'c': 30, 'd': 25}
+
+
+Q3 — Tricky: Nested Dictionary Value Update
+Problem:
+Ek nested dictionary di gayi hai jisme student ka naam aur unka marks stored hai. Tumhe ek specific student ke marks update karne hain.
+
+Example Input:
+
+python
+Copy
+Edit
+students = {
+    '101': {'name': 'Ashu', 'marks': 85},
+    '102': {'name': 'Ravi', 'marks': 78}
+}
+Task: Ravi ke marks ko 90 karna.
+
+Expected Output:
+
+python
+Copy
+Edit
+{
+    '101': {'name': 'Ashu', 'marks': 85},
+    '102': {'name': 'Ravi', 'marks': 90}
+}
+
+
+Q4 — Advanced: Group Employees by Department
+Problem:
+Ek list of dictionaries di gayi hai jisme har employee ka naam aur department diya hai. Tumhe department ko key banake employees ki list value me store karni hai.
+
+Example Input:
+
+python
+Copy
+Edit
+employees = [
+    {'name': 'Alice', 'dept': 'IT'},
+    {'name': 'Bob', 'dept': 'HR'},
+    {'name': 'Charlie', 'dept': 'IT'},
+    {'name': 'David', 'dept': 'Finance'},
+    {'name': 'Eve', 'dept': 'HR'}
+]
+Expected Output:
+
+python
+Copy
+Edit
+{
+    'IT': ['Alice', 'Charlie'],
+    'HR': ['Bob', 'Eve'],
+    'Finance': ['David']
+}
