@@ -50,16 +50,9 @@ Log when each reminder was shown (date and time).
 
 Ask for user input to confirm “Done” for the task before deleting it.
 """
-
-
-
-
 import time                          # STEP 1: Importing time module
 import random                        # STEP 2: Importing random module
 from datetime import datetime        # STEP 3: Importing datetime module
-
-
-
 
 
 # 🎯 Step 1: List of reminders
@@ -70,19 +63,12 @@ reminders = [                        # STEP 4: Creating list of tasks with count
 ]
 
 
-
-
-
 # 🎯 Step 2: Decorator to track how many times a task is shown
 def track_calls(func):              # STEP 5: track_calls gets defined (not run yet)
     def wrapper(reminder):          # STEP 6: inner wrapper function defined
         reminder["times"] += 1      # STEP 10: increase count when wrapper is called
         return func(reminder)       # STEP 11: call the original show_reminder function
     return wrapper                  # STEP 7: wrapper is returned
-
-
-
-
 
 
 @track_calls                        # STEP 8: decorator applied — show_reminder = track_calls(show_reminder)
