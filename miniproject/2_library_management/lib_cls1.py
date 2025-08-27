@@ -79,12 +79,9 @@ if __name__ == "__main__":
             print("book return is successful")
 
         elif ch1 == 5:
-            print(f"see you next time {user_name}")
+            print(f"see you next time '{user_name}'\n Greetings: {name}")
             break
 
         else:
             print("please enter a valid choice")
 
-
-#main function
-#infinite while loop runs forever which asks for user choice and
