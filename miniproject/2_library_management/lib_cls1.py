@@ -38,6 +38,10 @@ class Library:
     def disp_name(self):
         return self.lib_name
 
+    def print_dict(self):
+        for key, value in self.dict1.items():
+            print(f"{key}: {value}")
+
 list1 = ["harry potter", "eat the frog", "alchemist", "richest man in babylon", "rich dad poor dad"]
 Ashu_library =   Library(list1, "Ashu_library")
 
@@ -54,6 +58,7 @@ if __name__ == "__main__":
               "press 2 to borrow a book \n" ,
               "press 3 to donate a book to the library\n" ,
               "press 4 to return if you are borrowing a book\n" ,
+              "press 6 to print who own which books\n" ,
               "press 5 to exit \n")
 
         ch1 = int(input())
@@ -81,6 +86,9 @@ if __name__ == "__main__":
         elif ch1 == 5:
             print(f"see you next time '{user_name}'\n Greetings: {name}")
             break
+
+        elif ch1 == 6:
+            Ashu_library.print_dict()
 
         else:
             print("please enter a valid choice")
