@@ -1,0 +1,20 @@
+2025-09-01 09:00:01 [INFO] Server started on port 8080
+2025-09-01 09:00:03 [DEBUG] Loading config from /etc/app/config.yml
+2025-09-01 09:00:05 [WARN] Disk space low: 12% remaining
+2025-09-01 09:00:07 [ERROR] Failed to connect to database: timeout after 5000ms
+2025-09-01 09:00:10 [INFO] Retrying connection (attempt 1/3)
+2025-09-01 09:00:12 [ERROR] Authentication failed for user 'admin'
+2025-09-01 09:00:15 [INFO] Healthcheck: ok
+2025-09-01 09:00:18 [DEBUG] Cache miss for key=user:123
+2025-09-01 09:00:22 [ERROR] NullPointerException at Service.process(Order.java:87)
+2025-09-01 09:00:25 [INFO] Request 3f2a handled in 123ms
+2025-09-01 09:00:28 [WARN] Slow query detected: 2400ms
+2025-09-01 09:00:30 [INFO] Scheduled job 'cleanup' started
+2025-09-01 09:00:33 [ERROR] Payment gateway response: 502 BAD GATEWAY
+2025-09-01 09:00:36 [INFO] User 'ashu' logged in
+2025-09-01 09:00:39 [DEBUG] Feature flag checkout_v2=false
+2025-09-01 09:00:41 [INFO] Metrics flushed to Prometheus
+2025-09-01 09:00:44 [ERROR] File write failed: permissions denied (/var/log/app.log)
+2025-09-01 09:00:47 [INFO] Graceful shutdown initiated
+2025-09-01 09:00:49 [WARN] Orphan process detected, pid=4321
+2025-09-01 09:00:52 [info] lowercase info should NOT match ERROR
